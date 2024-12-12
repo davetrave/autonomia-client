@@ -59,6 +59,10 @@ const App = () => {
 
   useEffect(() => {
     // const store = localStorage.getItem("ton-connect-ui_wallet-info")
+    const env = import.meta.env.VITE_ENV
+    const api = import.meta.env.VITE_APP_API_URL
+    console.log("Config(mod)", env)
+    console.log("API(mod)", api)
     if (wallet) {
       setConnected(true)
       console.log("CONN:> ", connected)
