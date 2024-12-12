@@ -38,7 +38,6 @@
 
 import { useEffect, useState } from 'react';
 import { TonConnectButton } from '@tonconnect/ui-react';
-import { Button } from '@telegram-apps/telegram-ui';
 import { CryptoBackground } from './components/bg/CryptoBg';
 import { useTonConnect } from './hooks/useTonConnect';
 import {TonConfig} from './services/web3/tonConfig'
@@ -46,9 +45,9 @@ import { useTonWallet } from '@tonconnect/ui-react'
 import OnboardingScreen from './components/onboarding/Onboarding';
 import MainApp from './components/layout/MainApp';
 
-const categories:string[] = [
-  'Basics', 'DeFi', 'NFTs', 'Trading', 'Security'
-];
+// const categories:string[] = [
+//   'Basics', 'DeFi', 'NFTs', 'Trading', 'Security'
+// ];
 
 const App = () => {
   const { connected } = useTonConnect();
@@ -59,7 +58,7 @@ const App = () => {
   const [isConnected, setConnected] = useState(false)
 
   useEffect(() => {
-    const store = localStorage.getItem("ton-connect-ui_wallet-info")
+    // const store = localStorage.getItem("ton-connect-ui_wallet-info")
     if (wallet) {
       setConnected(true)
       console.log("CONN:> ", connected)

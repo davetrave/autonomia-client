@@ -1,4 +1,3 @@
-import styles from './module.css';
 import { Section, Timeline } from '@telegram-apps/telegram-ui';
 
 const TIMELINE_ITEMS = [

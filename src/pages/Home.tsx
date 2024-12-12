@@ -7,7 +7,6 @@ import {
   Banner
 } from '@telegram-apps/telegram-ui';
 import {IconTelegramStar} from '../assets/icons/IconTgStar'
-import WebApp from '@twa-dev/sdk'
 
 
 interface CourseCardProps {
