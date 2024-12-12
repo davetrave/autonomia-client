@@ -1,6 +1,6 @@
 
 
-import React,{ useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BottomNavigation from '../../components/layout/BottomNavigation';
 import Home from '../../pages/Home';
@@ -11,14 +11,6 @@ import Profile from '../../pages/profile/Profile';
 
 const MainApp: React.FC = () => {
   
-
-  useEffect(() => {
-    const env = import.meta.env.VITE_ENV
-    const api = import.meta.env.VITE_APP_API_URL
-    console.log("Config(mod)", env)
-    console.log("API(mod)", api)
-
-  }, [])
 
   return (
     <Router>
