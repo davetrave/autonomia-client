@@ -7,6 +7,8 @@ import {
   Banner
 } from '@telegram-apps/telegram-ui';
 import {IconTelegramStar} from '../assets/icons/IconTgStar'
+import WebApp from '@twa-dev/sdk'
+import WebApp from '@twa-dev/sdk';
 
 
 interface CourseCardProps {
@@ -60,22 +62,27 @@ const Home: React.FC = () => {
   const handleStarPayment = async (courseTitle: string, stars: number) => {
     try {
       // Initialize Telegram WebApp payments
-      const webapp = (window as any).Telegram.WebApp;
+      // const webapp = (window as any).Telegram.WebApp;
+        await WebApp.openInvoice("https://t.me/$cPPTQ9Ra4VL1BAAA7ykH3Rjjz9c", (status) => {
+        console.log(status)
+        console.log(courseTitle)
+        console.log(stars)
+      })
       
-      if (webapp) {
+      // if (webapp) {
        
-        await webapp.createInvoiceLink({
-          title: `Purchase ${courseTitle} course at ${stars}`,
-          payload: "",
-          description: "This will cost 1500 stars. Would you like to proceed?",
-          prices: [{price: "90"}],
-          currency: "XTR"
+      //   await webapp.({
+      //     title: `Purchase ${courseTitle} course at ${stars}`,
+      //     payload: "",
+      //     description: "This will cost 1500 stars. Would you like to proceed?",
+      //     prices: [{price: "90"}],
+      //     currency: "XTR"
           
-        });
+      //   });
         
-        // Handle payment logic here
-        // You would typically integrate with Telegram's payment API
-      }
+      //   // Handle payment logic here
+      //   // You would typically integrate with Telegram's payment API
+      // }
     } catch (error) {
       console.error('Payment error:', error);
     }
@@ -86,19 +93,19 @@ const Home: React.FC = () => {
       title: "Crypto Basics",
       description: "Learn the fundamentals of cryptocurrency.",
       image: "https://via.placeholder.com/150",
-      stars: 500
+      stars: 1500
     },
     {
       title: "Blockchain Explained",
       description: "Understand how blockchain works.",
       image: "https://via.placeholder.com/150",
-      stars: 750
+      stars: 1500
     },
     {
       title: "Investing in Crypto",
       description: "Explore how to invest safely.",
       image: "https://via.placeholder.com/150",
-      stars: 1000
+      stars: 1500
     }
   ];
 
