@@ -65,10 +65,10 @@ const Home: React.FC = () => {
       if (webapp) {
        
         await webapp.createInvoiceLink({
-          title: `Purchase ${courseTitle}`,
+          title: `Purchase ${courseTitle} course at ${stars}`,
           payload: "",
-          description: `This will cost ${stars} stars. Would you like to proceed?`,
-          prices: [{price: `${stars}`}],
+          description: "This will cost 1500 stars. Would you like to proceed?",
+          prices: [{price: "90"}],
           currency: "XTR"
           
         });

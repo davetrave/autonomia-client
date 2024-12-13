@@ -8,9 +8,7 @@ import Courses from '../../pages/courses/Course';
 import Store from '../../pages/store/Store';
 import Profile from '../../pages/profile/Profile';
 
-
 const MainApp: React.FC = () => {
-  
 
   return (
     <Router>
