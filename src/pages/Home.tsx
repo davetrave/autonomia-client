@@ -62,7 +62,7 @@ const Home: React.FC = () => {
     try {
       // Initialize Telegram WebApp payments
       // const webapp = (window as any).Telegram.WebApp;
-        await WebApp.openInvoice("https://t.me/$cPPTQ9Ra4VL1BAAA7ykH3Rjjz9c", (status) => {
+        await WebApp.openInvoice("https://t.me/$ckYIsnwI6VLDAQAAn8h24O1j-iM", (status) => {
         console.log("STATUS:> ", status)
         console.log(courseTitle)
         console.log(stars)
